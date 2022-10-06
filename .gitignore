@@ -1,129 +1,65 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+#Name= Sachin Kalra 
+#Author= Madhiha Kazmi
+#Date created= 5 october 2022
+#Date last modified= 5 october 2022
+# Purpose:
+# this program will act as a geometry calculator for the calculations of area (in centimeter) and 
+# perimeter(centimeter square)  of different shapes according to the values entered by the user.
 
-# C extensions
-*.so
+# first it will ask the user to choose number between 1 and 4
+print("Geometry Calculator")
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+print("1. Calculate the area of circle")
+print("2. Calculate the area  of rectangle")
+print("3. Calculate the area of a triangle")
+print("4. Quit")
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+print("enter your choice (1-4)")
+choice= int(input())
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
+#when the user choose option 1 , it will then ask the user for the value of radius to calculate 
+#area and perimeter  
+if choice ==1:
+    print("enter the radius of circle")
+    radius= input()
+    radius=float(radius)
 
-# Translations
-*.mo
-*.pot
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
+    print("The area of circle is", 3.14*radius*radius, "square centimeters")
+    print(" The perimeter of the circle is",2*3.14*radius, "cm" )
+# if the user enter 2, then it will ask the user to enter the desired  width amd length of the rectangle 
+#to calculate the area and parameter of triangle.
+elif choice== 2:
+    print("enter the  width of rectangle:")
+    width=input()
+    width=float(width)
 
-# Flask stuff:
-instance/
-.webassets-cache
+    print("enter the length of rectangle:")
+    length=input()
+    length=float(length)
 
-# Scrapy stuff:
-.scrapy
+    print("the area of rectangle is" , width*length, "square cetimeters")
+    print("the perimeter of rectangle is",2* length+width, "cm")
+# if the user entered 3, user will be asked to provide height1 , height2 and base of traiangle to calculate
+# area and perimeter of the triangle. 
+elif choice== 3:
+    print ("enter the  heigth1 of triangle:")
+    height1 =input()
+    height1 =float(height1)
 
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
+    print ("enter the  heigth2 of triangle:")
+    height2=input()
+    height2 =float(height2)
+    
+    print("enter the base of  triangle:")
+    base= input()
+    base = float(base)
+    print("the  area of triangle is" , 0.5*base*height1 "square centimeters")
+    print(" the perimeter of triangle is",base+height1+height2 "cm" )
+#if user  select the option 4 it will quit and dislpay the  following message
+elif choice==4:
+        print("thankyou for quitting ")
+# if user put  any other value than 1,2,3,4 it will show error and ask user to enter a valid value.
+else:
+    print("please enter a valid value only between 1 and 4.")
